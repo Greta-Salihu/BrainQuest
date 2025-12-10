@@ -28,8 +28,11 @@ body{
     display: flex;
     gap: 20px;
     list-style: none;
+}
 
-
+.box h2{
+    color: rgb(255, 255, 255);
+    font-family: poppins, sans-serif;
 }
 
 .box a{
@@ -91,6 +94,25 @@ button {
     padding: 40px;
     font-family: poppins, sans-serif;
     margin-bottom: 80px;
+}
+
+.p1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.p1 .about-a{
+    width: 45%;
+    font-size: 18px;
+}
+
+.p1 .foto2{
+    width: 55%;
+}
+
+.p1 .foto2 img{
+    width: 100%;
 }
 
 .about-a{
