@@ -1,0 +1,125 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(74, 108, 247);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.brainquest{
+    padding-left: 20px;
+    height: 60px;
+    width: auto 60px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+body{
+    background-color: rgb(333, 249, 254);
+}
+
+.box ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+
+}
+
+.box a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: poppins, sans-serif;
+}
+
+.content{
+  display: flex;
+  align-items: center;       
+  justify-content: space-between;
+  gap: 40px;                
+  padding: 20px;
+  font-family: poppins, sans-serif;
+}
+
+.foto{
+    width: 600px;
+}
+
+.titulli p{
+    font-size: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    background:  rgb(74, 108, 247);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-family: poppins, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+.pse{
+    font-family: poppins, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.arsyet{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    padding: 10px;
+    font-family: poppins, sans-serif;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    font-family: poppins, sans-serif;
+    margin-bottom: 80px;
+}
+
+.about-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-a h2{
+    text-align: center;
+}
+
+.foto2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.foto2 img{
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(74, 108, 247);
+    font-family: poppins, sans-serif;
+}
