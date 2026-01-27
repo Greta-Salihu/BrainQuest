@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +8,10 @@
 </head>
 <body>
 
-    <header class="box">
-      <h2>BrainQuest</h2>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="aboutus.html">AboutUs</a></li>
-            <li><a href="services.html">Services</a></li>
-        </ul>
-    </header>
+    <?php
+    session_start();
+    include 'header.php';
+    ?>
 
 <div class="content">
 <div class="titulli">
@@ -46,7 +41,4 @@
 </body>
 </html>
 
-<footer>
-        <p>© 2024 BrainQuest. Të gjitha të drejtat e rezervuara.</p>
-    </footer>
-
+<?php include 'footer.php' ?>
