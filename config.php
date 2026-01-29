@@ -1,7 +1,7 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "BrainQuest")
+$conn = mysqli_connect("localhost", "root", "", "brainquest");
 
 if(!$conn){
-    die("Connection failed");
+    die("Nuk eshte lidhur me databaze!");
 }
 ?>
