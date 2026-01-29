@@ -36,9 +36,9 @@
     <h3>🔵Menaxhimi ditor dhe i deadline-ve</h3>
     <h3>🔵Ndjekja e progresit të studimeve</h3>
     </div>
-
+    
+<?php include 'footer.php' ?>
 
 </body>
 </html>
 
-<?php include 'footer.php' ?>
