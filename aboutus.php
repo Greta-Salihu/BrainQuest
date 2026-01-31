@@ -1,3 +1,7 @@
+<?php
+session_start();
+include 'header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +12,7 @@
 </head>
 <body>
 
-    <header class="box">
-        <h2>BrainQuest</h2>
-        <ul>
-            <li><a href="BrainQuest.html">Home</a></li>
-            <li><a href="">AboutUs</a></li>
-            <li><a href="services.html">Services</a></li>
-        </ul>
-    </header>
-
+    
     
 
     <div class="about">

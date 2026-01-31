@@ -1,56 +1,58 @@
+<?php
+session_start();
+include 'header.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrainQuest</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BrainQuest | Services</title>
+    <link rel="stylesheet" href="services.css">
 </head>
 <body>
 
-     <header class="box">
-        <h2>BrainQuest</h2>
-        <ul>
-            <li><a href="BrainQuest.html">Home</a></li>
-            <li><a href="aboutus.html">AboutUs</a></li>
-            <li><a href="">Services</a></li>
-        </ul>
-    </header>
 
-    <div class="services-content">
-        <h1>Shërbimet tona</h1>
-        <p>Çfarë ofron BrainQuest?</p>
-        </div>
-        <div class="kutia">
-        <div class="service-item">
-            <div class="kutiaa">
-            <h2>Planifikimi i Studimeve</h2>
-            <p>
-                Ndihmojmë studentët të krijojnë orare studimi të personalizuara dhe të menaxhojnë detyrat e tyre në mënyrë efektive.
-            </p>
-        </div>
-        </div>
-        <div class="service-item">
-            <div class="kutiaa">
-            <h2>Menaxhimi i Detyrave</h2>
-            <p>
-                Ofron mjete për të ndjekur afatet dhe për të organizuar detyrat në një mënyrë të thjeshtë dhe intuitive.
-            </p>
-            </div>
-        </div>
-        <div class="service-item">
-            <div class="kutiaa">
-            <h2>Ndjekja e Progresit</h2>
-            <p>
-                Lejon studentët të monitorojnë përparimin e tyre akademik dhe të qëndrojnë të motivuar gjatë gjithë semestrit.
-            </p>
-            </div>
-        </div>
-        </div>
-        
+<section class="hero">
+    <h2>Our Services</h2>
+    <p>BrainQuest helps students plan, organize and succeed in their studies.</p>
+</section>
 
+<section class="services-container">
+
+    <div class="service-box">
+        <h3>📅 Study Planner</h3>
+        <p>
+            Create daily and weekly study plans to organize your tasks and manage your time effectively.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>⏰ Reminder System</h3>
+        <p>
+            Set reminders for exams, homework and deadlines so you never miss an important task.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>📊 Progress Tracking</h3>
+        <p>
+            Track your study progress and see how much you have achieved every week.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>🧠 Smart Study Tips</h3>
+        <p>
+            Get helpful study tips and techniques to improve focus and learning efficiency.
+        </p>
+    </div>
+
+</section>
+
+<?php include 'footer.php' ?>
 
 
-<footer>
-        <p>© 2024 BrainQuest. Të gjitha të drejtat e rezervuara.</p>
-    </footer>
+</body>
+</html>
