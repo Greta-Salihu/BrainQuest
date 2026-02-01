@@ -1,52 +1,29 @@
 <?php
-session_start();
 include 'header.php';
+include 'config/Database.php';
+
+$db=new Database();
+$conn=$db->connect();
+
+if(isset($_POST['send'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $msg=$_POST['message'];
+
+    if(empty($name)||empty($email)||empty($msg)){
+        echo "All fields required";
+    }else{
+        $conn->query("INSERT INTO contacts(name,email,message) VALUES('$name','$email','$msg')");
+        echo "Message sent!";
+    }
+}
 ?>
+<form method="post">
+    <input name="name" required>
+    <input name="email" type="email" required>
+    <textarea name="message" required></textarea>
+    <button name="send">Send</button>
+</form>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>BrainQuest | Contact</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-
-<header class="header">
-    <h1>Contact Us</h1>
-    <p>Get in touch with BrainQuest Study Planner</p>
-</header>
-
-<section class="contact-container">
-
-    <div class="contact-info">
-        <h2>Our Information</h2>
-        <p><strong>Email:</strong> brainquest@gmail.com</p>
-        <p><strong>Phone:</strong> +383 44 123 456</p>
-        <p><strong>Address:</strong> Prishtina, Kosovo</p>
-    </div>
-
-    <div class="contact-form">
-        <h2>Send us a message</h2>
-
-        <form>
-            <label>Name:</label><br>
-            <input type="text" placeholder="Enter your name"><br><br>
-
-            <label>Email:</label><br>
-            <input type="email" placeholder="Enter your email"><br><br>
-
-            <label>Message:</label><br>
-            <textarea placeholder="Write your message"></textarea><br><br>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-
-</section>
-
-
-<?php include 'footer.php' ?>
-
-</body>
-</html>
+<?php include 'footer.php'; 
+?>

@@ -1,39 +1,24 @@
-<?php session_start(); 
-include "config.php";
+<?php
+include 'header.php';
+include 'config/Database.php';
+include 'classes/User.php';
+
+$db=new Database();
+$conn=$db->connect();
+$user=new User($conn);
 
 if(isset($_POST['login'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $query = "SELECT * FROM users WHERE email = '$email'";
-    $result = mysqli_query($conn, $query);
-    $user = mysqli_fetch_assoc($result);
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user'] = $user;
-        header("Location: BrainQuest.php");
-        exit();
-    } else {
-        echo "Email ose password gabim";
-    }
+    if($user->login($_POST['username'],$_POST['password'])){
+        header("Location: dashboard.php");
+    }else echo "Login failed";
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-
-<h2>Login</h2>
-<form method="POST" action="login.php">
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
-    <button type="submit" name="login">Login</button>
+<form method="post">
+    <input name="username" required>
+    <input name="password" type="password" required>
+    <button name="login">Login</button>
 </form>
-    
-</body>
-</html>
+
+<?php include 'footer.php'; 
+?>
