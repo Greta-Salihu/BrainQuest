@@ -7,10 +7,12 @@
 </head>
 <body>
 
- <?php
- session_start();
- include 'header.php';
- ?>
+<?php
+session_start();
+include 'header.php';
+include 'config/Database.php';
+include 'classes/News.php';
+?>
 
 <h2 class="title">Latest News</h2>
 

@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 include 'config/Database.php';
-include 'classes/services.php';
+include 'classes/Services.php';
 
 $db=new Database();
 $conn=$db->connect();
