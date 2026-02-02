@@ -9,34 +9,17 @@ body {
     background-color: #f2f2f2;
 }
 
-
-.header {
-    background-color: #4f46e5;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
 .contact-container {
     width: 80%;
     margin: 40px auto;
     display: flex;
-    gap: 30px;
+    justify-content: center;
 }
-
-
-.contact-info {
-    background-color: white;
-    padding: 20px;
-    width: 40%;
-    border: 1px solid #ccc;
-}
-
 
 .contact-form {
     background-color: white;
     padding: 20px;
-    width: 60%;
+    width: 100%;
     border: 1px solid #ccc;
 }
 
@@ -45,12 +28,12 @@ input, textarea {
     padding: 10px;
     font-family: "Poppins", sans-serif;
     border: 1px solid #ccc;
+    margin-bottom: 15px;
 }
 
 textarea {
     height: 120px;
 }
-
 
 button {
     background-color: #4f46e5;
@@ -63,12 +46,4 @@ button {
 
 button:hover {
     background-color: #3730a3;
-}
-
-footer {
-    background-color: #4f46e5;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
 }

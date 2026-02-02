@@ -1,26 +1,35 @@
 <?php
+session_start();
 include 'header.php';
 include 'config/Database.php';
-include 'classes/news.php';
 
-$db=new Database();
-$conn=$db->connect();
-$news=new News($conn);
+$db = new Database();
+$conn = $db->connect();
 
-$res=$news->getAll();
+$result = $conn->query("SELECT * FROM news ORDER BY id DESC");
 ?>
 
-<link rel="stylesheet" href="news.css">
+<h2 class="title">Latest News</h2>
 
-<div class="news-container">
-    <h1>Latest News</h1>
+<div class="news-box">
 
-    <?php while($row = $result->fetch_assoc()): ?>
+<?php
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        ?>
         <div class="news-item">
-            <h2><?php echo $row['title']; ?></h2>
-            <p><?php echo $row['content']; ?></p>
+            <img src="download2.webp" alt="News">
+            <h3><?= $row['title']; ?></h3>
+            <p class="date"><?= date("F d, Y", strtotime($row['created_at'])); ?></p>
+            <p><?= $row['content']; ?></p>
         </div>
-    <?php endwhile; ?>
+        <?php
+    }
+} else {
+    echo "<p>No news available.</p>";
+}
+?>
+
 </div>
 
 <?php include 'footer.php'; ?>

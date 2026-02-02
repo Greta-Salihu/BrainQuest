@@ -6,6 +6,9 @@ $db = new Database();
 $conn = $db->connect();
 $result = $conn->query("SELECT * FROM pages WHERE name='about'");
 $row = $result->fetch_assoc();
+if (!$row) {
+    $row = ['title' => 'About Us', 'content' => ''];
+}
 ?>
 
 <link rel="stylesheet" href="aboutus.css">

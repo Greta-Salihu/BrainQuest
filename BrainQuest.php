@@ -5,7 +5,15 @@ include 'config/Database.php';
 $db = new Database();
 $conn = $db->connect();
 $result = $conn->query("SELECT * FROM pages WHERE name='home'");
-$row = $result->fetch_assoc();
+
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+} else {
+    $row = [
+        'title' => 'Page not found',
+        'content' => ''
+    ];
+}
 ?>
 
 <link rel="stylesheet" href="home.css">
