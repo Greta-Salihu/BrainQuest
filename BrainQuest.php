@@ -2,13 +2,23 @@
 include 'header.php';
 include 'config/Database.php';
 
-$db=new Database();
-$conn=$db->connect();
-$res=$conn->query("SELECT content FROM pages WHERE page_name='home'");
-$row=$res->fetch_assoc();
+$db = new Database();
+$conn = $db->connect();
+$result = $conn->query("SELECT * FROM pages WHERE name='home'");
+$row = $result->fetch_assoc();
 ?>
 
-<div class="slider"><img src="uploads/slide1.jpg"></div>
-<h1><?php echo $row['content']; ?></h1>
+<link rel="stylesheet" href="home.css">
+
+<div class="home-container">
+
+    <h1><?php echo $row['title']; ?></h1>
+    <p><?php echo $row['content']; ?></p>
+
+    <div class="slider">
+        <img src="uploads/slide1.jpg" alt="slide">
+    </div>
+
+</div>
 
 <?php include 'footer.php'; ?>

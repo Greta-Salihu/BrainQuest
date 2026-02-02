@@ -5,16 +5,23 @@ include 'classes/Services.php';
 
 $db=new Database();
 $conn=$db->connect();
-$product=new Product($conn);
+$service = new Services($conn);
 
-$res=$product->getAll();
-
-while($row=$res->fetch_assoc()){
-    echo "<h3>".$row['title']."</h3>";
-    echo "<p>".$row['description']."</p>";
-    echo "<img src='uploads/".$row['image']."' width='200'>";
-    echo "<p>By: ".$row['created_by']."</p>";
-}
-
-include 'footer.php';
+$res = $service->getAll();
 ?>
+
+<link rel="stylesheet" href="services.css">
+
+<div class="services-container">
+    <h1>Our Services</h1>
+
+    <?php while($row = $result->fetch_assoc()): ?>
+        <div class="service-card">
+            <h2><?php echo $row['name']; ?></h2>
+            <p><?php echo $row['description']; ?></p>
+        </div>
+    <?php endwhile; ?>
+</div>
+
+
+<?php include 'footer.php'; ?>

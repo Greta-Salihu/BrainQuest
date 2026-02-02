@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins/Poppins-Regular.ttf");
+}
+
+.home-container {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-container h1 {
+  color: #4f46e5;
+  font-size: 32px;
+}
+
+.home-container p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.slider img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+@media (max-width:768px){
+  .home-container { padding: 10px; }
+}
